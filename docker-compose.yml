@@ -11,3 +11,18 @@ services:
       MYSQL_DATABASE: greeninvoice
     ports:
       - 3306:3306
+
+  # backend:
+  #   container_name: green_invoice_backend
+  #   restart: always
+  #   command: npm run start
+  #   build:
+  #     context: ./
+  #     dockerfile: Dockerfile
+  #   environment:
+  #     DATABASE_DB: greeninvoice,
+  #     DATABASE_USER: root,
+  #     DATABASE_PASS: somelongpassword,
+  #     DATABASE_HOST: localhost
+  #   ports:
+  #     - "3000:3000"

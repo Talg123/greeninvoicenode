@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000;
         // await sequelize.drop();
         await sequelize.sync();
     } catch (error) {
+        console.log(error)
         throw new Error(error);
     }
     app.use(express.json());

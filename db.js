@@ -6,13 +6,15 @@ const EmployeeManagerModel = require('./models/employee_manager');
 const ManagerDeprtmentModel = require('./models/manager_department');
 const config = process.env;
 
+console.log(process.env.DATABASE_DB)
+
 const sequelize = new Sequelize(
-	config.DATABASE_DB,
-	config.DATABASE_USER,
-	config.DATABASE_PASS,
+	config.DATABASE_DB || 'greeninvoice',
+	config.DATABASE_USER || 'root',
+	config.DATABASE_PASS || 'somelongpassword',
 	{
 		dialect: 'mysql',
-		host: config.DATABASE_HOST,
+		host: config.DATABASE_HOST || 'localhost',
 		port: 3306
 	}
 );
